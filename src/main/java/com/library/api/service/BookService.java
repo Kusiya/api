@@ -72,8 +72,7 @@ public class BookService {
         book.setTitle(request.getTitle());
         book.setAuthor(request.getAuthor());
         book.setIsbn(request.getIsbn());
-        book.setPublicationYear(request.getPublicationYear());
-        book.setDescription(request.getDescription());
+        book.setYear(request.getPublicationYear());
         book.setAvailable(request.getAvailable() != null ? request.getAvailable() : true);
 
         // Сохраняем в базу
@@ -103,8 +102,7 @@ public class BookService {
         book.setTitle(request.getTitle());
         book.setAuthor(request.getAuthor());
         book.setIsbn(request.getIsbn());
-        book.setPublicationYear(request.getPublicationYear());
-        book.setDescription(request.getDescription());
+        book.setYear(request.getPublicationYear());
         book.setAvailable(request.getAvailable() != null ? request.getAvailable() : book.getAvailable());
 
         // Сохраняем изменения
@@ -228,11 +226,10 @@ public class BookService {
                 .title(book.getTitle())
                 .author(book.getAuthor())
                 .isbn(book.getIsbn())
-                .publicationYear(book.getPublicationYear())
-                .description(book.getDescription())
+                .publicationYear(book.getYear())
                 .available(book.getAvailable())
-                .createdAt(book.getCreatedAt())
-                .updatedAt(book.getUpdatedAt())
+                .createdAt(book.getCreatedAt().atStartOfDay())
+                .updatedAt(book.getUpdatedAt().atStartOfDay())
                 .build();
     }
 
