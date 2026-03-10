@@ -27,10 +27,7 @@ public class BookRequest {
 
     @Min(value = 1450, message = "Год не может быть раньше 1450 (изобретение книгопечатания)")
     @Max(value = 2026, message = "Год не может быть в будущем")
-    private Integer publicationYear;
-
-    @Size(max = 1000, message = "Описание не может превышать 1000 символов")
-    private String description;
+    private Integer year;
 
     private Boolean available = true;
 }

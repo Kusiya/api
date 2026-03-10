@@ -16,8 +16,7 @@ public class BookResponse {
     private String title;
     private String author;
     private String isbn;
-    private Integer publicationYear;
-    private String description;
+    private Integer year;
     private Boolean available;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
