@@ -2974,3 +2974,764 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 2026-03-10 15:10:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-10 15:10:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-03-10 15:10:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 15:12:16 [main] INFO  com.library.api.ApiApplication - Starting ApiApplication using Java 21.0.5 with PID 12312 (C:\Users\Galop\IdeaProjects\api\target\classes started by Galop in C:\Users\Galop\IdeaProjects\api)
+2026-03-10 15:12:16 [main] DEBUG com.library.api.ApiApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-03-10 15:12:16 [main] INFO  com.library.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-10 15:12:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10 15:12:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-03-10 15:12:17 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 15:12:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 15:12:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10 15:12:17 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1345 ms
+2026-03-10 15:12:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 15:12:18 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4776e209
+2026-03-10 15:12:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 15:12:18 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10 15:12:18 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10 15:12:18 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10 15:12:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10 15:12:18 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/library_bd]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: library_bd/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10 15:12:20 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10 15:12:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 15:12:20 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10 15:12:21 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10 15:12:21 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 15:12:21 [main] INFO  com.library.api.ApiApplication - Started ApiApplication in 5.775 seconds (process running for 6.291)
+2026-03-10 15:12:21 [main] INFO  c.library.api.config.DataInitializer - Initializing test data...
+2026-03-10 15:12:21 [main] DEBUG org.hibernate.SQL - select count(*) from books b1_0
+2026-03-10 15:12:21 [main] DEBUG org.hibernate.SQL - select count(*) from readers r1_0
+2026-03-10 15:12:21 [main] INFO  c.library.api.config.DataInitializer - Data initialization completed
+2026-03-10 15:12:32 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 15:12:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 15:12:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-10 15:12:32 [http-nio-8080-exec-1] INFO  c.l.api.controller.BookController - REST request to get book with id: 1
+2026-03-10 15:12:32 [http-nio-8080-exec-1] INFO  com.library.api.service.BookService - Fetching book with id: 1
+2026-03-10 15:12:32 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.author,b1_0.available,b1_0.created_at,b1_0.isbn,b1_0.title,b1_0.updated_at,b1_0.year from books b1_0 where b1_0.id=?
+2026-03-10 15:12:33 [http-nio-8080-exec-2] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:12:38 [http-nio-8080-exec-3] INFO  c.l.api.controller.BookController - REST request to get all books
+2026-03-10 15:12:38 [http-nio-8080-exec-3] INFO  com.library.api.service.BookService - Fetching all books from database
+2026-03-10 15:12:38 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.author,b1_0.available,b1_0.created_at,b1_0.isbn,b1_0.title,b1_0.updated_at,b1_0.year from books b1_0
+2026-03-10 15:12:39 [http-nio-8080-exec-4] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:14:55 [http-nio-8080-exec-5] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xa00x010x000x060x9c0x030x0392[0x8d0xba0xd50xb7\0xcfW0xa60xfa0xa80xc60xd30xa00x800xbd0xce0xa10xe8c0xb1"$0xfe0xe20xe40x000x900xe60x8c ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:43:52 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 15:43:52 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 15:43:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 15:43:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 15:43:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 15:43:54 [main] INFO  com.library.api.ApiApplication - Starting ApiApplication using Java 21.0.5 with PID 14376 (C:\Users\Galop\IdeaProjects\api\target\classes started by Galop in C:\Users\Galop\IdeaProjects\api)
+2026-03-10 15:43:54 [main] DEBUG com.library.api.ApiApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-03-10 15:43:54 [main] INFO  com.library.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-10 15:43:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10 15:43:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-03-10 15:43:55 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 15:43:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 15:43:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10 15:43:55 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1395 ms
+2026-03-10 15:43:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 15:43:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@110b7837
+2026-03-10 15:43:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 15:43:56 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10 15:43:56 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10 15:43:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10 15:43:56 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10 15:43:56 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/library_bd]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: library_bd/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10 15:43:57 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10 15:43:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 15:43:58 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10 15:43:59 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10 15:43:59 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 15:43:59 [main] INFO  com.library.api.ApiApplication - Started ApiApplication in 5.921 seconds (process running for 6.52)
+2026-03-10 15:43:59 [main] INFO  c.library.api.config.DataInitializer - Initializing test data...
+2026-03-10 15:43:59 [main] DEBUG org.hibernate.SQL - select count(*) from books b1_0
+2026-03-10 15:43:59 [main] DEBUG org.hibernate.SQL - select count(*) from readers r1_0
+2026-03-10 15:43:59 [main] INFO  c.library.api.config.DataInitializer - Data initialization completed
+2026-03-10 15:44:15 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 15:44:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 15:44:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-10 15:44:15 [http-nio-8080-exec-1] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/books/1/borrow for request '/api/books/1/borrow'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:44:15 [http-nio-8080-exec-2] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:44:27 [http-nio-8080-exec-3] INFO  c.l.api.controller.BookController - REST request to get all books
+2026-03-10 15:44:27 [http-nio-8080-exec-3] INFO  com.library.api.service.BookService - Fetching all books from database
+2026-03-10 15:44:27 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.author,b1_0.available,b1_0.created_at,b1_0.isbn,b1_0.title,b1_0.updated_at,b1_0.year from books b1_0
+2026-03-10 15:44:28 [http-nio-8080-exec-4] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:45:06 [http-nio-8080-exec-5] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xe00x010x000x060xdc0x030x03uAS0x8bT0x000xd2:0xa40xeb0xb2p0xcf0x0c0x1aY&^v0xd64$Z0xae0x9aB0xda0x070xd7D0xbcO ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:45:36 [http-nio-8080-exec-7] INFO  c.l.api.controller.ReaderController - REST request to get all readers
+2026-03-10 15:45:36 [http-nio-8080-exec-7] INFO  c.library.api.service.ReaderService - Fetching all readers
+2026-03-10 15:45:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select r1_0.id,r1_0.created_at,r1_0.email,r1_0.first_name,r1_0.last_name,r1_0.phone,r1_0.registration_date,r1_0.updated_at from readers r1_0
+2026-03-10 15:45:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(br1_0.id) from borrow_records br1_0 where br1_0.reader_id=? and br1_0.status='ACTIVE'
+2026-03-10 15:45:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(br1_0.id) from borrow_records br1_0 where br1_0.reader_id=? and br1_0.status='ACTIVE'
+2026-03-10 15:45:36 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(br1_0.id) from borrow_records br1_0 where br1_0.reader_id=? and br1_0.status='ACTIVE'
+2026-03-10 15:45:36 [http-nio-8080-exec-8] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:48:42 [http-nio-8080-exec-10] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/books/1/return for request '/api/books/1/return'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:48:42 [http-nio-8080-exec-1] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:49:05 [http-nio-8080-exec-2] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/books/1/borrow for request '/api/books/1/borrow'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 15:49:05 [http-nio-8080-exec-3] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 16:32:54 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 16:32:54 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 16:32:54 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 16:32:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 16:32:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 16:33:02 [main] INFO  com.library.api.ApiApplication - Starting ApiApplication using Java 21.0.5 with PID 16496 (C:\Users\Galop\IdeaProjects\api\target\classes started by Galop in C:\Users\Galop\IdeaProjects\api)
+2026-03-10 16:33:02 [main] DEBUG com.library.api.ApiApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-03-10 16:33:02 [main] INFO  com.library.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-10 16:33:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10 16:33:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2026-03-10 16:33:04 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 16:33:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 16:33:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10 16:33:04 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1424 ms
+2026-03-10 16:33:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 16:33:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@110b7837
+2026-03-10 16:33:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 16:33:04 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10 16:33:04 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10 16:33:05 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10 16:33:05 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10 16:33:05 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/library_bd]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: library_bd/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10 16:33:06 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10 16:33:06 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 16:33:06 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10 16:33:07 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10 16:33:08 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 16:33:08 [main] INFO  com.library.api.ApiApplication - Started ApiApplication in 5.93 seconds (process running for 6.451)
+2026-03-10 16:33:08 [main] INFO  c.library.api.config.DataInitializer - Initializing test data...
+2026-03-10 16:33:08 [main] DEBUG org.hibernate.SQL - select count(*) from books b1_0
+2026-03-10 16:33:08 [main] DEBUG org.hibernate.SQL - select count(*) from readers r1_0
+2026-03-10 16:33:08 [main] INFO  c.library.api.config.DataInitializer - Data initialization completed
+2026-03-10 16:33:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 16:33:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 16:33:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-10 16:33:25 [http-nio-8080-exec-1] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/books/1/borrow_records for request '/api/books/1/borrow_records'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 16:33:26 [http-nio-8080-exec-2] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 16:35:06 [http-nio-8080-exec-3] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xa00x010x000x060x9c0x030x030x9c0x03@0x1f0x0b0x9f<-90x150xc8I0x1e80xbd0xac0xbb0x870xf8w0x990xb80xf0;un0xeb0x1c0x1e0xbeh0x90 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 17:29:52 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 17:29:52 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 17:29:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 17:29:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 17:29:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-10 17:30:09 [main] INFO  com.library.api.ApiApplication - Starting ApiApplication using Java 21.0.5 with PID 16240 (C:\Users\Galop\IdeaProjects\api\target\classes started by Galop in C:\Users\Galop\IdeaProjects\api)
+2026-03-10 17:30:09 [main] DEBUG com.library.api.ApiApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-03-10 17:30:09 [main] INFO  com.library.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-10 17:30:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10 17:30:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2026-03-10 17:30:11 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-10 17:30:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-10 17:30:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10 17:30:11 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1502 ms
+2026-03-10 17:30:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-10 17:30:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38029686
+2026-03-10 17:30:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-10 17:30:11 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10 17:30:11 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10 17:30:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10 17:30:12 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10 17:30:12 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/library_bd]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: library_bd/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10 17:30:13 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10 17:30:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 17:30:13 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10 17:30:15 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10 17:30:15 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-03-10 17:30:15 [main] INFO  com.library.api.ApiApplication - Started ApiApplication in 6.469 seconds (process running for 7.041)
+2026-03-10 17:30:15 [main] INFO  c.library.api.config.DataInitializer - Initializing test data...
+2026-03-10 17:30:15 [main] DEBUG org.hibernate.SQL - select count(*) from books b1_0
+2026-03-10 17:30:15 [main] DEBUG org.hibernate.SQL - select count(*) from readers r1_0
+2026-03-10 17:30:15 [main] INFO  c.library.api.config.DataInitializer - Data initialization completed
+2026-03-10 17:30:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10 17:30:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-10 17:30:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-10 17:30:26 [http-nio-8080-exec-1] INFO  c.l.api.controller.BookController - REST request to get all books
+2026-03-10 17:30:26 [http-nio-8080-exec-1] INFO  com.library.api.service.BookService - Fetching all books from database
+2026-03-10 17:30:26 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.author,b1_0.available,b1_0.created_at,b1_0.isbn,b1_0.title,b1_0.updated_at,b1_0.year from books b1_0
+2026-03-10 17:30:27 [http-nio-8080-exec-2] ERROR c.l.a.e.GlobalExceptionHandler - Internal server error: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 17:35:06 [http-nio-8080-exec-3] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xa00x010x000x060x9c0x030x030xab0x166i0x8e#0xf60x950x19E80xb5ra0xe0@0x83m0xd3i0x1c0xf0u;0x1cB0xb90xb30x0c0xc50x97~ ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-10 17:38:41 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10 17:38:41 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-10 17:38:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10 17:38:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-10 17:38:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
